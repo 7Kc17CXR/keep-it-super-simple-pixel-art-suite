@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keep it super simple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>keep it super simple</h1>
+        </header>
+        <div class="top-panel">
+            <div class="controls">
+                <input type="color" id="colorPicker" value="#000000">
+                <button id="eraserBtn">eraser</button>
+                <button id="undoBtn">undo</button>
+                <button id="redoBtn">redo</button>
+                <button id="clearBtn">clear</button>
+                <button id="newBtn">new</button>
+                <button id="saveBtn">save</button>
+                <button id="exportBtn">export</button>
+                <button id="importBtn">import</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="editor">
+                <div id="grid"></div>
+            </div>
+            <div class="right-panel">
+                <h2>saved designs</h2>
+                <div id="designList"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

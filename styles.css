@@ -1,0 +1,128 @@
+body, html {
+    font-family: 'courier new', courier, monospace;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: lowercase;
+}
+
+h2 {
+    text-transform: lowercase;
+}
+
+.top-panel {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.editor {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.right-panel {
+    width: 250px;
+    background-color: #eee;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-gap: 1px;
+    background-color: #ccc;
+    border: 1px solid #999;
+}
+
+.pixel {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button, input[type="color"] {
+    cursor: pointer;
+    font-family: inherit;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+input[type="color"] {
+    vertical-align: middle;
+    height: 30px;
+}
+
+.design-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.design-item button {
+    margin-left: 5px;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.current-design {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .right-panel {
+        width: 100%;
+        height: 30vh;
+    }
+}
